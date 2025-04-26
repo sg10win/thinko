@@ -1,0 +1,212 @@
+/* Mobile-First CSS for Riddle Matrix - Fixed Shake Animation */
+:root {
+    --matrix-green: #0f0;
+    --dark-green: #0a0;
+    --bg-dark: #111;
+    --bg-darker: #222;
+    --bg-gray: #333;
+    --error-red: #f00;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  html {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: var(--bg-dark);
+    color: var(--matrix-green);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Matrix Title */
+  .title {
+    text-align: center;
+    font-size: 28px;
+    margin: 10px 0 20px;
+    color: var(--matrix-green);
+    text-shadow: 0 0 5px var(--matrix-green);
+  }
+  
+  /* Riddle Box */
+  .riddle-box {
+    background-color: var(--bg-darker);
+    padding: 18px;
+    border-radius: 8px;
+    min-height: 160px;
+    border: 1px solid var(--dark-green);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-dark);
+    border-radius: 5px;
+    margin: 12px 0;
+    overflow: hidden;
+    border: 1px solid var(--dark-green);
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--matrix-green);
+    border-radius: 5px;
+    transition: width 0.6s ease;
+  }
+  
+  /* Input Area */
+  .answer-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  #answerInput {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--matrix-green);
+    background-color: var(--bg-dark);
+    color: var(--matrix-green);
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  #submitBtn {
+    padding: 0 16px;
+    font-size: 16px;
+    border: 1px solid var(--matrix-green);
+    background-color: var(--bg-dark);
+    color: var(--matrix-green);
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+  }
+  
+  /* Hint Button */
+  #hint {
+    width: 100%;
+    margin-top: 8px;
+    background-color: var(--bg-gray);
+    color: var(--matrix-green);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Fixed Shake Animation */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-8px); }
+    80% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    border-color: var(--error-red) !important;
+  }
+  
+  /* Blinking Cursor */
+  .blink {
+    border-right: 2px solid var(--matrix-green);
+    animation: blink 0.8s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { border-color: var(--matrix-green); }
+    50% { border-color: transparent; }
+  }
+  
+  /* Success Animation */
+  .success-animation {
+    animation: pop 0.5s;
+  }
+  
+  @keyframes pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  /* Completion Message */
+  .completion-message {
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .completion-message h1 {
+    font-size: 24px;
+    color: var(--matrix-green);
+    margin-bottom: 16px;
+  }
+  
+  .completion-message p {
+    font-size: 14px;
+    color: var(--dark-green);
+    margin-top: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 400px) {
+    .container {
+      max-width: 400px;
+    }
+    
+    .title {
+      font-size: 32px;
+    }
+    
+    .riddle-box {
+      min-height: 180px;
+    }
+  }/* Add this to your existing CSS */
+.hint-separator {
+    display: block;
+    margin: 10px 0;
+    color: var(--dark-green);
+    text-align: center;
+}
+
+.hint-text {
+    display: block;
+    margin-top: 8px;
+    color: var(--matrix-green);
+    font-style: italic;
+}

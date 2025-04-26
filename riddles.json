@@ -1,0 +1,98 @@
+[
+    {
+        "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+        "answer": "echo",
+        "hint": "It repeats what you say."
+    },
+    {
+        "question": "The more of me you take, the more you leave behind. What am I?",
+        "answer": "footsteps",
+        "hint": "Think about moving."
+    },
+    {
+        "question": "What has keys but can't open locks?",
+        "answer": "piano",
+        "hint": "It plays music."
+    },
+    {
+        "question": "I never speak but answer. I’m not alive but grow. I’m not visible but felt. What am I?",
+        "answer": "trust",
+        "hint": "It’s related to human connection."
+    },
+    {
+        "question": "The more you share me, the smaller I get. The more you keep me, the heavier I become. What am I?",
+        "answer": "secret",
+        "hint": "It lives in your mind."
+    },
+    {
+        "question": "Always running, never walking, Often babbling, never talking, Has a bed but never sleeps, Has a mouth but never eats.",
+        "answer": "river",
+        "hint": "It’s a part of nature in constant motion."
+    },
+    {
+        "question": "I am taken from a mine, and shut in a wooden case, from which I am never released, and yet I am used by almost every person.",
+        "answer": "lead",
+        "hint": "It’s connected to writing."
+    },
+    {
+        "question": "The more you remove from me, the bigger I get. What am I?",
+        "answer": "hole",
+        "hint": "It’s an absence, not a thing."
+    },
+    {
+        "question": "I shrink when watched, I die when caught, I live in dreams, but die in light.",
+        "answer": "shadow",
+        "hint": "It’s related to light and presence."
+    },
+    {
+        "question": "I have no legs, but I race the fastest. I have no arms, but I push mountains.",
+        "answer": "wind",
+        "hint": "It’s invisible but powerful."
+    },
+    {
+        "question": "Break me, and I remain whole. Hold me, and I vanish.",
+        "answer": "promise",
+        "hint": "It’s something you give in words."
+    },
+    {
+        "question": "I'm heaviest when you ignore me, lightest when you share me. A prisoner to secrets.",
+        "answer": "guilt",
+        "hint": "It’s an emotional weight."
+    },
+    {
+        "question": "Born in a second, dead in two, seen by many, captured by few.",
+        "answer": "idea",
+        "hint": "It flashes quickly in your mind."
+    },
+    {
+        "question": "The more you know me, the less I control you. But when you forget me, I win.",
+        "answer": "fear",
+        "hint": "It weakens when faced."
+    },
+    {
+        "question": "I have cities but no people, roads but no cars, rivers but no water.",
+        "answer": "map",
+        "hint": "It shows the world without being alive."
+    },
+    {
+        "question": "No lock can hold me, no key can open me, yet I can trap a mind forever.",
+        "answer": "memory",
+        "hint": "It’s trapped inside your head."
+    },
+    {
+        "question": "I never stop growing, yet I'm already complete. A mirror to your soul.",
+        "answer": "name",
+        "hint": "It’s something you’re called by others."
+    },
+    {
+        "question": "I am born of lies, I die with truth, I thrive in silence.",
+        "answer": "rumor",
+        "hint": "It spreads when people don't know the facts."
+    },
+    {
+        "question": "If you know me, I disappear. If you seek me, I hide. If you name me, I’m gone.",
+        "answer": "silence",
+        "hint": "It vanishes when you speak."
+    }
+
+]
