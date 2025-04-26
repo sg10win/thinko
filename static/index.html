@@ -2,43 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ===== PWA META TAGS ===== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#111111">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Riddle Matrix">
-    
-    <!-- Android Chrome -->
-    <meta name="theme-color" content="#111111">
-    
-    <!-- Windows -->
-    <meta name="msapplication-navbutton-color" content="#111111">
-    <meta name="msapplication-TileColor" content="#111111">
-    <meta name="msapplication-TileImage" content="/static/icon-144.png">
+    <meta name="apple-mobile-web-app-title" content="THINKO">
     
     <!-- Favicon and App Icons -->
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/static/icon-512.png">
     <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-    
-    <!-- Web App Manifest -->
     <link rel="manifest" href="/static/site.webmanifest">
-    <!-- ===== END PWA META TAGS ===== -->
+    
     <title>THINKO</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="manifest" href="/static/site.webmanifest">
-<meta name="theme-color" content="#111111">
+    <style>
+        /* Install button styles */
+        .install-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0f0;
+            color: #111;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .install-btn:hover {
+            background: #0a0;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+        }
+        .install-btn img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
 </head>
-<button id="installButton" class="install-btn">
-    <img src="/static/icon-192.png" width="24" height="24">
-    Install App
-  </button>
 <body>
     <div class="container">
-        <h1 class="title"><span>Thinko</span></h1>
+        <h1 class="title"><span>THINKO</span></h1>
         <div id="riddle" class="riddle-box"></div>
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
@@ -50,12 +65,17 @@
         <button id="hint">Show Hint</button>
     </div>
 
+    <!-- Install Button - Now properly positioned at screen edge -->
+    <button id="installButton" class="install-btn" style="display: none;">
+        <img src="/static/icon-192.png" alt="Install icon">
+        Install App
+    </button>
+
+    <!-- Audio Elements -->
     <audio id="typeSound" src="/static/typing.mp3" preload="auto"></audio>
     <audio id="successSound" src="/static/success.wav" preload="auto"></audio>
     <audio id="errorSound" src="/static/error.mp3" preload="auto"></audio>
     <audio id="levelUpSound" src="/static/level-up.mp3" preload="auto"></audio>
-    
-
 
     <script src="/static/script.js"></script>
 </body>
